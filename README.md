@@ -75,6 +75,19 @@ uv run python -m src.experiments.run_resnet_hdbscan
 - Приложения: `report_assets/appendices/`
 - Шаблон структуры: `report_template/report_structure.md`
 
+## Подготовка материалов для отчета
+
+Команды:
+
+```bash
+python -m src.experiments.prepare_report_assets
+python -m src.experiments.validate_outputs
+```
+
+`prepare_report_assets` читает raw-результаты из `results/metrics/`, не переписывает их и создает отдельные report-ready таблицы в `report_assets/tables/` и зеркальные копии в `results/tables/`. Тот же скрипт пересобирает markdown-таблицы, текстовые фрагменты и приложения для будущего отчета.
+
+`validate_outputs` проверяет документацию, датасет, ключевые CSV, фигуры и report assets, а затем создает `VALIDATION_REPORT.md` в корне проекта. Если в отчете указан статус `READY FOR REPORT GENERATION`, проект можно считать подготовленным к следующему этапу генерации DOCX.
+
 ## Адаптированные реализации
 
 - `TRACLUS-like`, `Vector Field k-Means`, `sparse pointcloud estimation`, `Cluster Filter`, `CL-Det-like` и `ResNet-like embeddings` реализованы как адаптированные версии ключевых идей статей.
@@ -88,3 +101,4 @@ uv run python -m src.experiments.run_resnet_hdbscan
 - PNG-графики для отчета
 - Таблицы и текстовые markdown-заготовки
 - Сводный `final_comparison.csv`
+- `VALIDATION_REPORT.md` со статусом готовности

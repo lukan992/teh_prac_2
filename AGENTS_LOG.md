@@ -55,3 +55,23 @@
 ### Примечания
 - Quick-profile использует 1000 траекторий и уменьшенный point cloud профиль для воспроизводимого smoke-run.
 - Методы ряда статей реализованы как adapted versions и помечены в `README.md` и `limitations.md`.
+
+## 2026-06-07
+
+### Запрос
+Кратко: привести результаты и отчетные материалы к report-ready виду, добавить подготовку таблиц и валидацию готовности проекта.
+
+### Изменения
+- Добавлены `src/experiments/prepare_report_assets.py` и `src/experiments/validate_outputs.py`.
+- Сформированы report-ready CSV в `report_assets/tables/` и зеркальные копии в `results/tables/`.
+- Пересобраны markdown-таблицы, расширенные текстовые фрагменты и приложения в `report_assets/`.
+- Создан `VALIDATION_REPORT.md`, валидатор завершился со статусом `READY FOR REPORT GENERATION`.
+- README, PRD и SPEC обновлены под workflow подготовки материалов для отчета.
+
+### Документация
+- PRD.md: обновлен.
+- SPEC.md: обновлен.
+
+### Примечания
+- Raw CSV в `results/metrics/` не переписывались и остаются machine-readable источником результатов.
+- Для report-prep point cloud counts восстанавливаются из конфигурации и metadata, без зависимости от локального Git LFS checkout.

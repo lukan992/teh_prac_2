@@ -1,15 +1,13 @@
-| method | task_type | main_metric | main_metric_value |
-| --- | --- | --- | --- |
-| traclus | clustering | ari | 0.01280122452906911 |
-| st_dbscan | clustering | ari | 0.0 |
-| vector_field_kmeans | clustering | ari | 0.3291137759709169 |
-| spatiotemporal_clustering | clustering | ari | 0.24163741550645695 |
-| cnn_segment_classifier | classification | macro_f1 | 0.9428303633502565 |
-| lstm_baseline | forecasting | rmse | 45.66583147236564 |
-| lstm_class_aware | forecasting | rmse | 45.722156827953775 |
-| sparse_pointcloud | tracking | position_rmse | 41.80421204493643 |
-| cluster_filter | tracking | position_rmse | 33.81661229380115 |
-| cl_det | tracking | position_rmse | 38.70792548203346 |
-| handcrafted_hdbscan | clustering | ari | 0.2774079756845407 |
-| resnet_kmeans | clustering | ari | 0.7471605162354902 |
-| resnet_hdbscan | clustering | ari | 0.7313300476348559 |
+Сводные результаты показывают, что в текущем synthetic benchmark нет одного универсально лучшего метода для всех постановок. Картина получается содержательной именно потому, что разные семейства методов сильны в разных задачах. По блоку классической кластеризации полных траекторий лучшую ARI среди trajectory-first baseline-ов показывает Vector Field k-Means: ARI 0.329, NMI 0.500. Это заметно сильнее, чем у TRACLUS-like и ST-DBSCAN, и говорит о том, что grid-based velocity representation в текущем наборе данных лучше улавливает структуру движения, чем более грубые summary-описания.
+
+Learned embedding-подходи семейства ResNet-like выглядят еще сильнее. Лучший результат в этой группе дает ResNet-like embeddings + K-Means с ARI 0.747, NMI 0.845 и macro-F1 0.830. Для отчета это важный вывод: обучаемое представление траектории действительно помогает отделять паттерны движения лучше, чем часть classical baseline-ов. При этом второй learned вариант, ResNet-like embeddings + HDBSCAN, показывает близкое качество, тогда как вариант с ручными признаками и density clustering заметно слабее.
+
+CNN-классификатор сегментов на synthetic segment task показывает очень сильный результат: accuracy 0.941, precision_macro 0.945, recall_macro 0.943, macro-F1 0.943. Это подтверждает, что локальные сегменты движения хорошо разделимы в supervised постановке. Но интерпретировать такой результат нужно осторожно: высокий F1 здесь скорее подтверждает согласованность синтетического представления и разметки, чем заранее гарантирует ту же устойчивость на реальных данных.
+
+В forecasting-блоке разница между baseline LSTM и class-aware LSTM оказалась небольшой. Лучший RMSE показывает LSTM baseline со значением 45.67; одновременно MAE составляет 36.08, ADE — 71.98, FDE — 74.77. Существенного выигрыша от class-aware варианта не видно. Это полезный практический вывод: для текущего synthetic setup сама траекторная динамика уже несет большую часть информации, и добавление класса поведения не дает качественного скачка.
+
+По point cloud данным наиболее уверенно в режиме `medium` выглядит Cluster Filter с position RMSE 33.82. На уровне `hard` лучшим остается CL-Det / DBSCAN LiDAR tracking с RMSE 45.66, хотя абсолютные ошибки закономерно растут. Detection rate у всех трех baseline-ов остается высоким, поэтому различие проявляется главным образом не в самом факте нахождения цели, а в точности пространственной локализации в шумной сцене.
+
+С точки зрения ресурсоемкости самыми тяжелыми в итоговой сводке выглядят LSTM baseline с runtime около 12.52 с, а по пиковому RAM в `resource_usage.csv` максимальное значение наблюдается у Spatio-temporal trajectory clustering — около 1162.3 МБ. По VRAM текущие GPU-пайплайны держатся примерно в районе 7.2 ГБ на первой GPU и около 0.3 ГБ на второй, то есть остаются выполнимыми на заявленной конфигурации.
+
+Итоговая интерпретация здесь такая: CNN и learned embeddings показывают сильные результаты на synthetic benchmark, classical trajectory clustering остается полезным как более интерпретируемый baseline, а point cloud методы нужно обсуждать особенно осторожно из-за упрощенного характера симуляции. Для отчета этих результатов достаточно, чтобы не просто перечислить цифры, а осмысленно разобрать сильные и слабые стороны каждого семейства методов.

@@ -1,0 +1,15 @@
+| method | task_type | input_type | main_metric | main_metric_value | runtime_seconds | peak_ram_mb | peak_vram_mb | strengths | limitations | applicability_to_uav_pattern_detection |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| TRACLUS-like | clustering | trajectory/segment | ari | 0.01 | 0.24 | 1141.0 | 7215.883;308.0 | Interpretable clustering of motion patterns | Adapted implementation | Useful for exploratory grouping of patterns |
+| ST-DBSCAN | clustering | trajectory/segment | ari | 0.0 | 0.25 | 1155.7 | 7215.883;308.0 | Interpretable clustering of motion patterns | Adapted implementation | Useful for exploratory grouping of patterns |
+| Vector Field k-Means | clustering | trajectory/segment | ari | 0.33 | 1.7 | 1162.0 | 7220.57;308.0 | Interpretable clustering of motion patterns | Adapted implementation | Useful for exploratory grouping of patterns |
+| Spatio-temporal trajectory clustering | clustering | trajectory/segment | ari | 0.24 | 0.12 | 1162.3 | 7221.07;308.0 | Interpretable clustering of motion patterns | Adapted implementation | Useful for exploratory grouping of patterns |
+| CNN-классификатор сегментов | classification | segment | macro_f1 | 0.94 | 3.08 | 651.3 | 7220.57;308.0 | Direct behavior classification | Needs labeled synthetic windows | Useful when segment labels are available |
+| LSTM baseline | forecasting | segment | rmse | 45.67 | 12.52 | 703.2 | 7221.07;308.0 | Predictive motion modeling | Error grows with horizon | Useful for anticipation and tracking support |
+| Class-aware LSTM | forecasting | segment | rmse | 45.72 | 12.52 | 703.2 | 7221.07;308.0 | Predictive motion modeling | Error grows with horizon | Useful for anticipation and tracking support |
+| Sparse point cloud trajectory estimation | tracking | pointcloud | position_rmse | 41.8 | 2.96 | 978.0 | 7221.07;308.0 | Recovery from sparse observations | Simplified synthetic scene | Useful for sparse sensor tracking |
+| Cluster Filter | tracking | pointcloud | position_rmse | 33.82 | 3.93 | 982.2 | 7220.57;308.0 | Recovery from sparse observations | Simplified synthetic scene | Useful for sparse sensor tracking |
+| CL-Det / DBSCAN LiDAR tracking | tracking | pointcloud | position_rmse | 38.71 | 3.72 | 980.9 | 7215.883;308.0 | Recovery from sparse observations | Simplified synthetic scene | Useful for sparse sensor tracking |
+| Ручные признаки + HDBSCAN | clustering | trajectory image | ari | 0.28 | 11.09 | 1025.1 | 7221.07;308.0 | Learned embeddings for motion shape | Uses adapted 2D representation | Useful for non-linear pattern grouping |
+| ResNet-like embeddings + K-Means | clustering | trajectory image | ari | 0.75 | 11.09 | 1025.1 | 7221.07;308.0 | Learned embeddings for motion shape | Uses adapted 2D representation | Useful for non-linear pattern grouping |
+| ResNet-like embeddings + HDBSCAN | clustering | trajectory image | ari | 0.73 | 11.09 | 1025.1 | 7221.07;308.0 | Learned embeddings for motion shape | Uses adapted 2D representation | Useful for non-linear pattern grouping |

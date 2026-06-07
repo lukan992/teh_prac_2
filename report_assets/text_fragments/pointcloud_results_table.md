@@ -1,0 +1,11 @@
+| method | difficulty | position_rmse | detection_rate | false_positive_rate | track_fragmentation | fps |
+| --- | --- | --- | --- | --- | --- | --- |
+| CL-Det / DBSCAN LiDAR tracking | clean | 41.77 | 1.0 | 0.0 | 0.0 | 3.34 |
+| Sparse point cloud trajectory estimation | clean | 44.38 | 1.0 | 0.0 | 0.0 | 4.2 |
+| Cluster Filter | clean | 45.33 | 1.0 | 0.0 | 0.0 | 2.8 |
+| CL-Det / DBSCAN LiDAR tracking | hard | 45.66 | 1.0 | 0.0 | 0.0 | 3.62 |
+| Sparse point cloud trajectory estimation | hard | 51.09 | 1.0 | 0.0 | 0.0 | 4.66 |
+| Cluster Filter | hard | 62.18 | 1.0 | 0.0 | 0.0 | 3.92 |
+| Cluster Filter | medium | 33.82 | 1.0 | 0.0 | 0.0 | 3.05 |
+| CL-Det / DBSCAN LiDAR tracking | medium | 38.71 | 1.0 | 0.0 | 0.0 | 3.23 |
+| Sparse point cloud trajectory estimation | medium | 41.8 | 1.0 | 0.0 | 0.0 | 4.06 |

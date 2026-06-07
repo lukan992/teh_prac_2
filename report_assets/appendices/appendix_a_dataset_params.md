@@ -1,45 +1,34 @@
-# Dataset Specification
+# Appendix A. Dataset parameters
 
-## Trajectories
+## Trajectory generation
+- Dataset name: `synthetic_v1`
+- Random seed: `42`
+- Number of trajectories: `1000`
+- Trajectory length range: `80..200` points
+- Sample rate: `10` Hz
 
-- Minimum default size: 1000 trajectories for the quick profile.
-- Each trajectory contains 80 to 200 points.
-- Channels: `x, y, z, vx, vy, vz, speed, yaw, pitch, roll`.
-- Labels: `pattern_id`, `pattern_name`, `noise_level`.
+## Pattern list
+- `straight_flight`
+- `circular_orbit`
+- `rectangular_patrol`
+- `hover`
+- `spiral_climb`
+- `zigzag`
+- `sharp_turn`
+- `descent_approach`
+- `random_anomalous`
 
-## Segments
+## Segment dataset
+- Segment length: `50`
+- Segment stride: `25`
+- Forecast horizons (steps): `[5, 10, 20, 30]`
 
-- Fixed-length windows of 50 points with stride 25.
-- Feature channels: `x, y, z, vx, vy, vz, speed, yaw`.
-- Labels: behavior class and future trajectory targets.
+## Noise profiles
+- `clean`: position_std=0.12, drop_probability=0.01, false_clusters=1
+- `medium`: position_std=0.35, drop_probability=0.05, false_clusters=2
+- `hard`: position_std=0.7, drop_probability=0.12, false_clusters=3
 
-## Point Cloud
-
-- Per-frame synthetic point clouds at `clean`, `medium`, and `hard` difficulty.
-- Each frame contains UAV points, background points, random noise, and false clusters.
-- Ground truth UAV center is stored for tracking evaluation.
-
-## Pattern Classes
-
-1. `straight_flight`
-2. `circular_orbit`
-3. `rectangular_patrol`
-4. `hover`
-5. `spiral_climb`
-6. `zigzag`
-7. `sharp_turn`
-8. `descent_approach`
-9. `random_anomalous`
-
-## Noise Profiles
-
-- `clean`: low positional noise, dense UAV observations.
-- `medium`: moderate noise, background clusters, occasional frame drops.
-- `hard`: sparse UAV returns, stronger clutter, false targets, track gaps.
-
-## File Formats
-
-- CSV for trajectories, labels, point cloud frames, metrics, and tables.
-- NPZ for segment arrays and targets.
-- JSON for configs, metadata, and run logs.
-- PNG for figures.
+## Point cloud generation
+- Frames per trajectory: `12`
+- Background points: `24`
+- Missing-point probabilities: `{'clean': 0.02, 'medium': 0.08, 'hard': 0.18}`
