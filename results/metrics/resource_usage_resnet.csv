@@ -1,0 +1,2 @@
+method,runtime_seconds,peak_ram_mb,peak_vram_mb,parameter_count,mean_inference_time
+resnet_hdbscan_family,11.090844199999992,1025.117,7221.07;308.0,117065,0.0

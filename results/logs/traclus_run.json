@@ -1,0 +1,48 @@
+{
+  "method": "traclus",
+  "timestamp_utc": "2026-06-07T10:25:32.909674+00:00",
+  "config": {
+    "seed": 42,
+    "noise_level": "medium",
+    "methods": {
+      "traclus": {
+        "min_samples": 6,
+        "eps": 1.35,
+        "curvature_threshold": 0.35
+      },
+      "st_dbscan": {
+        "eps_spatial": 4.0,
+        "eps_temporal": 10.0,
+        "min_samples": 6
+      },
+      "vector_field_kmeans": {
+        "grid_size": 12,
+        "n_clusters": 9
+      },
+      "spatiotemporal_clustering": {
+        "n_clusters": 9
+      }
+    }
+  },
+  "metrics": {
+    "ari": 0.01280122452906911,
+    "nmi": 0.05577588171504989,
+    "purity": 0.4024024024024024,
+    "cluster_accuracy": 0.3843843843843844,
+    "macro_f1": 0.2753252005122329,
+    "noise_ratio": 0.1111111111111111,
+    "silhouette": 0.06438311628675995
+  },
+  "resource_usage": {
+    "runtime_seconds": 0.2400195000000167,
+    "peak_ram_mb": 1140.996,
+    "peak_vram_mb": [
+      7215.883,
+      308.0
+    ]
+  },
+  "notes": [
+    "Used HDBSCAN for density clustering.",
+    "Adapted TRACLUS-like implementation based on turn-driven segmentation."
+  ]
+}

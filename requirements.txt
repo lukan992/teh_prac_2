@@ -1,0 +1,15 @@
+numpy>=1.26
+pandas>=2.2
+scipy>=1.13
+scikit-learn>=1.5
+matplotlib>=3.9
+seaborn>=0.13
+pyyaml>=6.0.2
+psutil>=5.9
+tqdm>=4.66
+pillow>=10.4
+torch>=2.3
+torchvision>=0.18
+hdbscan>=0.8.39
+umap-learn>=0.5.6
+nvidia-ml-py>=12.555.43

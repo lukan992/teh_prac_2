@@ -1,0 +1,37 @@
+{
+  "method": "resnet_hdbscan_family",
+  "timestamp_utc": "2026-06-07T10:26:47.290590+00:00",
+  "config": {
+    "seed": 42,
+    "epochs": 6,
+    "batch_size": 64,
+    "learning_rate": 0.001,
+    "embedding_dim": 64,
+    "image_size": 64,
+    "use_hdbscan": true
+  },
+  "metrics": {
+    "method": "handcrafted_hdbscan",
+    "ari": 0.2774079756845407,
+    "nmi": 0.6168766940101591,
+    "purity": 0.47,
+    "cluster_accuracy": 0.47,
+    "macro_f1": 0.4021941914333115,
+    "noise_ratio": 0.179,
+    "silhouette": NaN
+  },
+  "resource_usage": {
+    "runtime_seconds": 11.090844199999992,
+    "peak_ram_mb": 1025.117,
+    "peak_vram_mb": [
+      7221.07,
+      308.0
+    ]
+  },
+  "notes": [
+    "Adapted ResNet-like encoder trained on synthetic trajectory images.",
+    "Embeddings are produced from a supervised synthetic pretraining stage.",
+    "Used HDBSCAN for density clustering.",
+    "Used HDBSCAN for density clustering."
+  ]
+}

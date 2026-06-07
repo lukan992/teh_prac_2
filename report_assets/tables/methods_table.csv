@@ -1,0 +1,12 @@
+method,group
+traclus,clustering
+st_dbscan,clustering
+vector_field_kmeans,clustering
+spatiotemporal_clustering,clustering
+cnn_segment_classifier,classification
+lstm_baseline,forecasting
+lstm_class_aware,forecasting
+sparse_pointcloud,tracking
+cluster_filter,tracking
+cl_det,tracking
+resnet_hdbscan,embedding clustering

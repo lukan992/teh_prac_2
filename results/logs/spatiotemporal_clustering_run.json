@@ -1,0 +1,47 @@
+{
+  "method": "spatiotemporal_clustering",
+  "timestamp_utc": "2026-06-07T10:25:35.025936+00:00",
+  "config": {
+    "seed": 42,
+    "noise_level": "medium",
+    "methods": {
+      "traclus": {
+        "min_samples": 6,
+        "eps": 1.35,
+        "curvature_threshold": 0.35
+      },
+      "st_dbscan": {
+        "eps_spatial": 4.0,
+        "eps_temporal": 10.0,
+        "min_samples": 6
+      },
+      "vector_field_kmeans": {
+        "grid_size": 12,
+        "n_clusters": 9
+      },
+      "spatiotemporal_clustering": {
+        "n_clusters": 9
+      }
+    }
+  },
+  "metrics": {
+    "ari": 0.24163741550645695,
+    "nmi": 0.43068381606418055,
+    "purity": 0.48869565217391303,
+    "cluster_accuracy": 0.43478260869565216,
+    "macro_f1": 0.4655616154339174,
+    "noise_ratio": 0.0,
+    "silhouette": 0.1075935900373399
+  },
+  "resource_usage": {
+    "runtime_seconds": 0.12099229999967065,
+    "peak_ram_mb": 1162.328,
+    "peak_vram_mb": [
+      7221.07,
+      308.0
+    ]
+  },
+  "notes": [
+    "Adapted spatio-temporal segment clustering on handcrafted short-window descriptors."
+  ]
+}

@@ -1,0 +1,5 @@
+parameter,value
+dataset_name,synthetic_v1
+trajectory_count,1000
+segment_length,50
+noise_levels,"clean, medium, hard"

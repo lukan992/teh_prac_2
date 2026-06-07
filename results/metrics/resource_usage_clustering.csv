@@ -1,0 +1,5 @@
+method,runtime_seconds,peak_ram_mb,peak_vram_mb,parameter_count,mean_inference_time
+traclus,0.2400195000000167,1140.996,7215.883;308.0,,
+st_dbscan,0.25279920000002676,1155.66,7215.883;308.0,,
+vector_field_kmeans,1.6965280999997958,1162.039,7220.57;308.0,,
+spatiotemporal_clustering,0.12099229999967065,1162.328,7221.07;308.0,,

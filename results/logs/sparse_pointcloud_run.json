@@ -1,0 +1,72 @@
+{
+  "method": "sparse_pointcloud",
+  "timestamp_utc": "2026-06-07T10:26:06.145407+00:00",
+  "config": {
+    "seed": 42,
+    "difficulty": "medium",
+    "dbscan_eps": 1.2,
+    "dbscan_min_samples": 4,
+    "cluster_filter_voxel_size": 1.0,
+    "smoothing_alpha": 0.65
+  },
+  "metrics": {
+    "runs": [
+      {
+        "difficulty": "clean",
+        "metrics": {
+          "position_rmse": 44.376039576683084,
+          "detection_rate": 1.0,
+          "false_positive_rate": 0.0,
+          "track_fragmentation": 0.0,
+          "fps": 4.203127336894551
+        },
+        "resource_usage": {
+          "runtime_seconds": 2.854954700000235,
+          "peak_ram_mb": 975.125,
+          "peak_vram_mb": [
+            7215.945,
+            308.0
+          ]
+        }
+      },
+      {
+        "difficulty": "medium",
+        "metrics": {
+          "position_rmse": 41.80421204493643,
+          "detection_rate": 1.0,
+          "false_positive_rate": 0.0,
+          "track_fragmentation": 0.0,
+          "fps": 4.057299208066161
+        },
+        "resource_usage": {
+          "runtime_seconds": 2.9575635000001057,
+          "peak_ram_mb": 978.02,
+          "peak_vram_mb": [
+            7221.07,
+            308.0
+          ]
+        }
+      },
+      {
+        "difficulty": "hard",
+        "metrics": {
+          "position_rmse": 51.093668661205896,
+          "detection_rate": 1.0,
+          "false_positive_rate": 0.0,
+          "track_fragmentation": 0.0,
+          "fps": 4.658700676734391
+        },
+        "resource_usage": {
+          "runtime_seconds": 2.5757548000001407,
+          "peak_ram_mb": 979.016,
+          "peak_vram_mb": [
+            7220.32,
+            308.0
+          ]
+        }
+      }
+    ]
+  },
+  "resource_usage": {},
+  "notes": []
+}

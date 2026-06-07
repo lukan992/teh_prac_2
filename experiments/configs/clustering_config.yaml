@@ -1,0 +1,16 @@
+seed: 42
+noise_level: medium
+methods:
+  traclus:
+    min_samples: 6
+    eps: 1.35
+    curvature_threshold: 0.35
+  st_dbscan:
+    eps_spatial: 4.0
+    eps_temporal: 10.0
+    min_samples: 6
+  vector_field_kmeans:
+    grid_size: 12
+    n_clusters: 9
+  spatiotemporal_clustering:
+    n_clusters: 9

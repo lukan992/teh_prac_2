@@ -1,0 +1,1 @@
+Дополнительные фигуры сохранены в `results/figures/` и `report_assets/figures/`.

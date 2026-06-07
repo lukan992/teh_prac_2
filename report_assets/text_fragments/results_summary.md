@@ -1,0 +1,15 @@
+| method | task_type | main_metric | main_metric_value |
+| --- | --- | --- | --- |
+| traclus | clustering | ari | 0.01280122452906911 |
+| st_dbscan | clustering | ari | 0.0 |
+| vector_field_kmeans | clustering | ari | 0.3291137759709169 |
+| spatiotemporal_clustering | clustering | ari | 0.24163741550645695 |
+| cnn_segment_classifier | classification | macro_f1 | 0.9428303633502565 |
+| lstm_baseline | forecasting | rmse | 45.66583147236564 |
+| lstm_class_aware | forecasting | rmse | 45.722156827953775 |
+| sparse_pointcloud | tracking | position_rmse | 41.80421204493643 |
+| cluster_filter | tracking | position_rmse | 33.81661229380115 |
+| cl_det | tracking | position_rmse | 38.70792548203346 |
+| handcrafted_hdbscan | clustering | ari | 0.2774079756845407 |
+| resnet_kmeans | clustering | ari | 0.7471605162354902 |
+| resnet_hdbscan | clustering | ari | 0.7313300476348559 |

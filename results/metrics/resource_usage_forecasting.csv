@@ -1,0 +1,3 @@
+method,runtime_seconds,peak_ram_mb,peak_vram_mb,parameter_count,mean_inference_time
+lstm_baseline,12.52480229999992,703.242,7221.07;308.0,116364,0.0
+lstm_class_aware,12.52480229999992,703.242,7221.07;308.0,119508,0.0

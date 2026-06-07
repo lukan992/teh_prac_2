@@ -1,0 +1,5 @@
+method,source,input_type,task_type,main_metric,main_metric_value,secondary_metrics
+traclus,adapted literature method,trajectory,clustering,ari,0.01280122452906911,nmi=0.05577588171504989; purity=0.4024024024024024; cluster_accuracy=0.3843843843843844; macro_f1=0.2753252005122329; noise_ratio=0.1111111111111111; silhouette=0.06438311628675995
+st_dbscan,adapted literature method,trajectory,clustering,ari,0.0,nmi=0.0; purity=0.3333333333333333; cluster_accuracy=0.3333333333333333; macro_f1=0.16666666666666666; noise_ratio=0.0; silhouette=nan
+vector_field_kmeans,adapted literature method,trajectory,clustering,ari,0.3291137759709169,nmi=0.5002799749454687; purity=0.8138138138138138; cluster_accuracy=0.5105105105105106; macro_f1=0.46295543198880096; noise_ratio=0.0; silhouette=0.1949193191085969
+spatiotemporal_clustering,adapted literature method,segment,clustering,ari,0.24163741550645695,nmi=0.43068381606418055; purity=0.48869565217391303; cluster_accuracy=0.43478260869565216; macro_f1=0.4655616154339174; noise_ratio=0.0; silhouette=0.1075935900373399

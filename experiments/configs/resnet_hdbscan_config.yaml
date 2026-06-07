@@ -1,0 +1,7 @@
+seed: 42
+epochs: 6
+batch_size: 64
+learning_rate: 0.001
+embedding_dim: 64
+image_size: 64
+use_hdbscan: true

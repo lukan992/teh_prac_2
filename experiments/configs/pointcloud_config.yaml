@@ -1,0 +1,6 @@
+seed: 42
+difficulty: medium
+dbscan_eps: 1.2
+dbscan_min_samples: 4
+cluster_filter_voxel_size: 1.0
+smoothing_alpha: 0.65

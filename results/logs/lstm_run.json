@@ -1,0 +1,60 @@
+{
+  "method": "lstm_family",
+  "timestamp_utc": "2026-06-07T10:25:51.635692+00:00",
+  "config": {
+    "seed": 42,
+    "epochs": 8,
+    "batch_size": 64,
+    "learning_rate": 0.001,
+    "hidden_size": 96,
+    "num_layers": 2,
+    "patience": 3
+  },
+  "metrics": {
+    "models": [
+      {
+        "name": "lstm_baseline",
+        "metrics": {
+          "mae": 36.078407287597656,
+          "mse": 2085.3681640625,
+          "rmse": 45.66583147236564,
+          "ade": 71.98477935791016,
+          "fde": 74.76675415039062,
+          "horizon_error": {
+            "5": 69.86365509033203,
+            "10": 71.09081268310547,
+            "20": 72.2178955078125,
+            "30": 74.76675415039062
+          }
+        },
+        "model_path": "C:\\Users\\aidar\\learn\\practos_2\\methods\\experiments\\runs\\lstm_baseline.pt"
+      },
+      {
+        "name": "lstm_class_aware",
+        "metrics": {
+          "mae": 36.20032501220703,
+          "mse": 2090.515625,
+          "rmse": 45.722156827953775,
+          "ade": 72.08995056152344,
+          "fde": 74.47908782958984,
+          "horizon_error": {
+            "5": 70.05277252197266,
+            "10": 70.96388244628906,
+            "20": 72.86405944824219,
+            "30": 74.47908782958984
+          }
+        },
+        "model_path": "C:\\Users\\aidar\\learn\\practos_2\\methods\\experiments\\runs\\lstm_class_aware.pt"
+      }
+    ]
+  },
+  "resource_usage": {
+    "runtime_seconds": 12.52480229999992,
+    "peak_ram_mb": 703.242,
+    "peak_vram_mb": [
+      7221.07,
+      308.0
+    ]
+  },
+  "notes": []
+}

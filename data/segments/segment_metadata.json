@@ -1,0 +1,20 @@
+{
+  "segment_length": 50,
+  "segment_stride": 25,
+  "segment_features": [
+    "x",
+    "y",
+    "z",
+    "vx",
+    "vy",
+    "vz",
+    "speed",
+    "yaw"
+  ],
+  "forecast_horizons_steps": [
+    5,
+    10,
+    20,
+    30
+  ]
+}

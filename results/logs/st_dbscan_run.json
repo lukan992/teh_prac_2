@@ -1,0 +1,47 @@
+{
+  "method": "st_dbscan",
+  "timestamp_utc": "2026-06-07T10:25:33.164890+00:00",
+  "config": {
+    "seed": 42,
+    "noise_level": "medium",
+    "methods": {
+      "traclus": {
+        "min_samples": 6,
+        "eps": 1.35,
+        "curvature_threshold": 0.35
+      },
+      "st_dbscan": {
+        "eps_spatial": 4.0,
+        "eps_temporal": 10.0,
+        "min_samples": 6
+      },
+      "vector_field_kmeans": {
+        "grid_size": 12,
+        "n_clusters": 9
+      },
+      "spatiotemporal_clustering": {
+        "n_clusters": 9
+      }
+    }
+  },
+  "metrics": {
+    "ari": 0.0,
+    "nmi": 0.0,
+    "purity": 0.3333333333333333,
+    "cluster_accuracy": 0.3333333333333333,
+    "macro_f1": 0.16666666666666666,
+    "noise_ratio": 0.0,
+    "silhouette": NaN
+  },
+  "resource_usage": {
+    "runtime_seconds": 0.25279920000002676,
+    "peak_ram_mb": 1155.66,
+    "peak_vram_mb": [
+      7215.883,
+      308.0
+    ]
+  },
+  "notes": [
+    "Adapted ST-DBSCAN using trajectory-level spatial and temporal descriptors."
+  ]
+}

@@ -1,0 +1,10 @@
+method,runtime_seconds,peak_ram_mb,peak_vram_mb,parameter_count,mean_inference_time
+sparse_pointcloud_clean,2.854954700000235,975.125,7215.945;308.0,,
+sparse_pointcloud_medium,2.9575635000001057,978.02,7221.07;308.0,,
+sparse_pointcloud_hard,2.5757548000001407,979.016,7220.32;308.0,,
+cluster_filter_clean,4.27919699999984,981.316,7220.633;308.0,,
+cluster_filter_medium,3.9338026999998874,982.207,7220.57;308.0,,
+cluster_filter_hard,3.063323500000024,980.867,7215.883;308.0,,
+cl_det_clean,3.5943975000000137,980.867,7215.945;308.0,,
+cl_det_medium,3.720613299999968,980.852,7215.883;308.0,,
+cl_det_hard,3.3113830000002054,980.852,7221.07;308.0,,

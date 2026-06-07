@@ -1,0 +1,47 @@
+{
+  "method": "vector_field_kmeans",
+  "timestamp_utc": "2026-06-07T10:25:34.872092+00:00",
+  "config": {
+    "seed": 42,
+    "noise_level": "medium",
+    "methods": {
+      "traclus": {
+        "min_samples": 6,
+        "eps": 1.35,
+        "curvature_threshold": 0.35
+      },
+      "st_dbscan": {
+        "eps_spatial": 4.0,
+        "eps_temporal": 10.0,
+        "min_samples": 6
+      },
+      "vector_field_kmeans": {
+        "grid_size": 12,
+        "n_clusters": 9
+      },
+      "spatiotemporal_clustering": {
+        "n_clusters": 9
+      }
+    }
+  },
+  "metrics": {
+    "ari": 0.3291137759709169,
+    "nmi": 0.5002799749454687,
+    "purity": 0.8138138138138138,
+    "cluster_accuracy": 0.5105105105105106,
+    "macro_f1": 0.46295543198880096,
+    "noise_ratio": 0.0,
+    "silhouette": 0.1949193191085969
+  },
+  "resource_usage": {
+    "runtime_seconds": 1.6965280999997958,
+    "peak_ram_mb": 1162.039,
+    "peak_vram_mb": [
+      7220.57,
+      308.0
+    ]
+  },
+  "notes": [
+    "Adapted Vector Field k-Means using grid-based velocity field descriptors."
+  ]
+}

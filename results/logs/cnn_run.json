@@ -1,0 +1,135 @@
+{
+  "method": "cnn_segment_classifier",
+  "timestamp_utc": "2026-06-07T10:25:38.829076+00:00",
+  "config": {
+    "seed": 42,
+    "epochs": 8,
+    "batch_size": 64,
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "patience": 3,
+    "hidden_channels": [
+      32,
+      64,
+      128
+    ]
+  },
+  "metrics": {
+    "accuracy": 0.9408695652173913,
+    "precision_macro": 0.9453642580889101,
+    "recall_macro": 0.9427961662243924,
+    "macro_f1": 0.9428303633502565,
+    "confusion_matrix": [
+      [
+        53,
+        7,
+        0,
+        0,
+        4,
+        0,
+        0,
+        4,
+        0
+      ],
+      [
+        0,
+        51,
+        0,
+        0,
+        9,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        54,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        62,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        4,
+        0,
+        0,
+        69,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        0,
+        60,
+        0,
+        0,
+        0
+      ],
+      [
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        69,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        71,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        52
+      ]
+    ]
+  },
+  "resource_usage": {
+    "runtime_seconds": 3.0761162999997396,
+    "peak_ram_mb": 651.301,
+    "peak_vram_mb": [
+      7220.57,
+      308.0
+    ]
+  },
+  "notes": [
+    "model_path=C:\\Users\\aidar\\learn\\practos_2\\methods\\experiments\\runs\\cnn_segment_classifier.pt"
+  ]
+}
